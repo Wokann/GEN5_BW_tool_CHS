@@ -132,10 +132,10 @@ namespace BW_tool
 							item.Enabled = true;
 						else if (i>=28)
 							//We should never reach this point
-							MessageBox.Show("Updatearea error 1");
+							MessageBox.Show("更新区域错误 1");
 						break;
 					default:
-						MessageBox.Show("Updatearea error 2");
+						MessageBox.Show("更新区域错误 2");
 						break;
 												
 				}
@@ -253,13 +253,13 @@ namespace BW_tool
 						switch(forest.Gender)
 						{
 							case 0:
-								dataGridView1.Rows[i].Cells[2].Value = "Male";
+								dataGridView1.Rows[i].Cells[2].Value = "雄性";
 								break;
 							case 1:
-								dataGridView1.Rows[i].Cells[2].Value = "Female";
+								dataGridView1.Rows[i].Cells[2].Value = "雌性";
 								break;
 							case 2:
-								dataGridView1.Rows[i].Cells[2].Value = "Genderless";
+								dataGridView1.Rows[i].Cells[2].Value = "无性别";
 								break;
 						}
 						dataGridView1.Rows[i].Cells[3].Value = forest.Form;
@@ -267,32 +267,32 @@ namespace BW_tool
 						switch(forest.Animation)
 						{
 							case 0:
-								dataGridView1.Rows[i].Cells[4].Value = "0"+forest.Animation.ToString()+"- "+"Randomly turning around";
+								dataGridView1.Rows[i].Cells[4].Value = "0"+forest.Animation.ToString()+"- "+"随机转动";
 
 								break;
 							case 2:
-								dataGridView1.Rows[i].Cells[4].Value = "0"+forest.Animation.ToString()+"- "+"Randomly walking";
+								dataGridView1.Rows[i].Cells[4].Value = "0"+forest.Animation.ToString()+"- "+"随机走动";
 								break;
 							case 4:
-								dataGridView1.Rows[i].Cells[4].Value = "0"+forest.Animation.ToString()+"- "+"Randomly walking";
+								dataGridView1.Rows[i].Cells[4].Value = "0"+forest.Animation.ToString()+"- "+"随机走动";
 								break;
 							case 6:
-								dataGridView1.Rows[i].Cells[4].Value = "0"+forest.Animation.ToString()+"- "+"Walking up/down";
+								dataGridView1.Rows[i].Cells[4].Value = "0"+forest.Animation.ToString()+"- "+"上下走动";
 								break;
 							case 8:
-								dataGridView1.Rows[i].Cells[4].Value = "0"+forest.Animation.ToString()+"- "+"Walking left/right";
+								dataGridView1.Rows[i].Cells[4].Value = "0"+forest.Animation.ToString()+"- "+"左右走动";
 								break;
 							case 10:
-								dataGridView1.Rows[i].Cells[4].Value = forest.Animation.ToString()+"- "+"Walking left/right and randomly looking up/down";
+								dataGridView1.Rows[i].Cells[4].Value = forest.Animation.ToString()+"- "+ "左右走动并随机上下观察";
 								break;
 							case 12:
-								dataGridView1.Rows[i].Cells[4].Value = forest.Animation.ToString()+"- "+"Turning around clockwise";
+								dataGridView1.Rows[i].Cells[4].Value = forest.Animation.ToString()+"- "+"顺时针转动";
 								break;
 							case 14:
-								dataGridView1.Rows[i].Cells[4].Value = forest.Animation.ToString()+"- "+"Turning around counterclockwise";
+								dataGridView1.Rows[i].Cells[4].Value = forest.Animation.ToString()+"- "+"逆时针转动";
 								break;
 							default:
-								dataGridView1.Rows[i].Cells[4].Value = forest.Animation.ToString()+"- "+"Invalid (odd)";
+								dataGridView1.Rows[i].Cells[4].Value = forest.Animation.ToString()+"- "+"无效";
 								break;
 						}
 
@@ -425,12 +425,12 @@ namespace BW_tool
 						sprite_warning.Text = "";
 						break;
 					}else
-						sprite_warning.Text = "Selected species does not have a sprite for BW2";
+						sprite_warning.Text = "选中的宝可梦不存在供黑白2的图像";
 				}
 			}
 			else if (spbox1.SelectedIndex > 493)
 			{
-				sprite_warning.Text = "Selected species does not have a sprite for BW";
+				sprite_warning.Text = "选中的宝可梦不存在供黑白的图像";
 			}
 			else
 			{
@@ -469,9 +469,9 @@ namespace BW_tool
 					special_gender = true;
 					genderbox1.Items.Clear();
 					genderbox1.Items.AddRange(new object[] {
-						"Male",
-						"Female",
-						"Genderless"});
+						"雄性",
+						"雌性",
+						"无性别"});
 					genderbox1.SelectedIndex = 2;
 					genderbox1.Enabled = false;
 				}
@@ -483,8 +483,8 @@ namespace BW_tool
 					genderbox1.Enabled = true;
 					genderbox1.Items.Clear();
 					genderbox1.Items.AddRange(new object[] {
-						"Male",
-						"Female"});
+						"雄性",
+						"雌性"});
 			}
 			
 			//Handle forms
@@ -530,10 +530,10 @@ namespace BW_tool
 				case 386:
 
 					formbox1.Items.AddRange(new object[] {
-						"Normal",
-						"Attack",
-						"Defense",
-						"Speed"});
+						"普通形态",
+						"攻击的样子",
+						"防御的样子",
+						"速度的样子"});
 					if (forest.Form > 4)
 						formbox1.SelectedIndex = 0;
 					else
@@ -542,9 +542,9 @@ namespace BW_tool
 				case 412:
 				case 413:
 					formbox1.Items.AddRange(new object[] {
-						"Plant",
-						"Sand",
-						"Trash"});
+						"草木蓑衣",
+						"砂土蓑衣",
+						"垃圾蓑衣"});
 					if (forest.Form > 3)
 						formbox1.SelectedIndex = 0;
 					else
@@ -553,8 +553,8 @@ namespace BW_tool
 				case 422:
 				case 423:
 					formbox1.Items.AddRange(new object[] {
-						"West Sea",
-						"East Sea"});
+						"西海",
+						"东海"});
 					if (forest.Form > 2)
 						formbox1.SelectedIndex = 0;
 					else
@@ -562,12 +562,12 @@ namespace BW_tool
 					break;
 				case 479:
 					formbox1.Items.AddRange(new object[] {
-						"Normal",
-						"Heat",
-						"Wash",
-						"Frost",
-						"Fan",
-						"Mow"});
+						"洛托姆",
+						"加热洛托姆",
+						"清洗洛托姆",
+						"结冰洛托姆",
+						"旋转洛托姆",
+						"切割洛托姆"});
 					if (forest.Form > 6)
 						formbox1.SelectedIndex = 0;
 					else
@@ -575,8 +575,8 @@ namespace BW_tool
 					break;
 				case 487:
 					formbox1.Items.AddRange(new object[] {
-						"Altered",
-						"Origin"});
+						"别种形态",
+						"起源形态"});
 					if (forest.Form > 2)
 						formbox1.SelectedIndex = 0;
 					else
@@ -584,8 +584,8 @@ namespace BW_tool
 					break;
 				case 492:
 					formbox1.Items.AddRange(new object[] {
-						"Land",
-						"Sky"});
+						"陆上形态",
+						"天空形态"});
 					if (forest.Form > 2)
 						formbox1.SelectedIndex = 0;
 					else
@@ -593,8 +593,8 @@ namespace BW_tool
 					break;
 				case 550:
 					formbox1.Items.AddRange(new object[] {
-						"Red",
-						"Blue"});
+						"红条纹的样子",
+						"蓝条纹的样子"});
 					if (forest.Form > 2)
 						formbox1.SelectedIndex = 0;
 					else
@@ -603,10 +603,10 @@ namespace BW_tool
 				case 585:
 				case 586:
 					formbox1.Items.AddRange(new object[] {
-						"Winter",
-						"Spring",
-						"Summer",
-						"Autumn"});
+						"冬天的样子",
+						"春天的样子",
+						"夏天的样子",
+						"秋天的样子"});
 					if (forest.Form > 4)
 						formbox1.SelectedIndex = 0;
 					else
@@ -614,8 +614,8 @@ namespace BW_tool
 					break;
 				case 648:
 					formbox1.Items.AddRange(new object[] {
-						"Aria",
-						"Pirouette"});
+						"歌声形态",
+						"舞步形态"});
 					if (forest.Form > 2)
 						formbox1.SelectedIndex = 0;
 					else
@@ -638,7 +638,7 @@ namespace BW_tool
 				
 				//Arceus warning
 				if ((dream_pkm & 0x7FF) == 493 && forest.Area != 1)
-					MessageBox.Show("Warning! PGL Arceus was a special event and is supposed to reside at area 9 center!\n\nI don't know if any other PGL Pokémon was distributed at special areas, I only know that Mamoswine and Porygon were download alongside other Dream World Pokémon, so Arceus might be the only special case. Any information on the topic is welcome.");
+					MessageBox.Show("警告！PGL阿尔宙斯是特殊事件，应当位于区域 中9！\n\n我不清楚是否有其他宝可梦被配信在特殊区域，我只知道象牙猪和多边兽曾和其它宝梦世界宝可梦被下载，所以阿尔宙斯应该是唯一的特殊情况。关于此主题的任何信息欢迎交流提供。");
 				
 				//If slot is empty, add pokemon instead
 				if (forest.is_pkm_empty() == true)
@@ -656,55 +656,55 @@ namespace BW_tool
 
 		void Pleasant_butClick(object sender, EventArgs e)
 		{
-			Form dreamworld = new Entralink_DreamWorld(0, "Pleasant Forest");
+			Form dreamworld = new Entralink_DreamWorld(0, "小小森林");
 			dreamworld.ShowDialog();
 			add_dw_pkm();
 		}
 		void Wind_butClick(object sender, EventArgs e)
 		{
-			Form dreamworld = new Entralink_DreamWorld(1, "Windswept Sky");
+			Form dreamworld = new Entralink_DreamWorld(1, "广阔天空");
 			dreamworld.ShowDialog();
 			add_dw_pkm();
 		}
 		void Spark_butClick(object sender, EventArgs e)
 		{
-			Form dreamworld = new Entralink_DreamWorld(2, "Sparkling Sea");
+			Form dreamworld = new Entralink_DreamWorld(2, "闪亮海洋");
 			dreamworld.ShowDialog();
 			add_dw_pkm();
 		}
 		void Spooky_butClick(object sender, EventArgs e)
 		{
-			Form dreamworld = new Entralink_DreamWorld(3, "Spooky Manor");
+			Form dreamworld = new Entralink_DreamWorld(3, "古老洋馆");
 			dreamworld.ShowDialog();
 			add_dw_pkm();
 		}
 		void Rugged_butClick(object sender, EventArgs e)
 		{
-			Form dreamworld = new Entralink_DreamWorld(4, "Rugged Mountain");
+			Form dreamworld = new Entralink_DreamWorld(4, "崎岖山脉");
 			dreamworld.ShowDialog();
 			add_dw_pkm();
 		}
 		void Icy_butClick(object sender, EventArgs e)
 		{
-			Form dreamworld = new Entralink_DreamWorld(5, "Icy Cave");
+			Form dreamworld = new Entralink_DreamWorld(5, "凉爽洞穴");
 			dreamworld.ShowDialog();
 			add_dw_pkm();
 		}
 		void Dream_butClick(object sender, EventArgs e)
 		{
-			Form dreamworld = new Entralink_DreamWorld(6, "Dream Park");
+			Form dreamworld = new Entralink_DreamWorld(6, "梦境公园");
 			dreamworld.ShowDialog();
 			add_dw_pkm();
 		}
 		void pkmcafe_butClick(object sender, EventArgs e)
 		{
-			Form dreamworld = new Entralink_DreamWorld(7, "Pokémon Café Forest");
+			Form dreamworld = new Entralink_DreamWorld(7, "宝可梦咖啡馆森林");
 			dreamworld.ShowDialog();
 			add_dw_pkm();
 		}
 		void Pgl_butClick(object sender, EventArgs e)
 		{
-			Form dreamworld = new Entralink_DreamWorld(8, "PGL Promotions");
+			Form dreamworld = new Entralink_DreamWorld(8, "PGL促销");
 			dreamworld.ShowDialog();
 			add_dw_pkm();
 		}
@@ -784,7 +784,7 @@ namespace BW_tool
 	        	
 	        	indexpkm = tmp_slot;
 	        	
-	        	FileIO.save_file(phl, "Entree Forest Area data|*.phl|All Files (*.*)|*.*");
+	        	FileIO.save_file(phl, "连入之森区域数据|*.phl|所有文件(*.*)|*.*");
 	        }
 	        
 	        public void import_area()
@@ -793,7 +793,7 @@ namespace BW_tool
 	        	
 	        	byte[] phl = new byte[4*20];
 	        	string path = null;
-	        	FileIO.load_file(ref phl, ref path, "Entree Forest Area data|*.phl|All Files (*.*)|*.*");
+	        	FileIO.load_file(ref phl, ref path, "连入之森区域数据|*.phl|所有文件(*.*)|*.*");
 	        	
 	        	UInt32 temp_pkm = 0;
 	        	
@@ -821,7 +821,7 @@ namespace BW_tool
 	        
 	        public void export_forest()
 	        {
-	        	FileIO.save_file(Data, "Entralink Forest Decrypted Data|*.efdd|All Files (*.*)|*.*");
+	        	FileIO.save_file(Data, "连入之森解密数据|*.efdd|所有文件(*.*)|*.*");
 	        }
 	        
 	        public void import_forest()
@@ -830,7 +830,7 @@ namespace BW_tool
 	        	
 	        	byte[] forest = new byte[2304];
 	        	string path = null;
-	        	FileIO.load_file(ref forest, ref path, "Entralink Forest Decrypted Data|*.efdd|All Files (*.*)|*.*");
+	        	FileIO.load_file(ref forest, ref path, "连入之森解密数据|*.efdd|所有文件(*.*)|*.*");
 	        	
 	        	Data = forest;
 	        	
@@ -922,7 +922,7 @@ Bits
 	        	if (found_empty == true)
 	        		Array.Copy(BitConverter.GetBytes(pkm), 0, Data, get_pkmoffset(), 4);
 	        	else
-	        		MessageBox.Show("There are no free slots in this area.");
+	        		MessageBox.Show("此区域没有多余槽位了");
 	        	
 	        	indexpkm = tmp_slot;
 	        }

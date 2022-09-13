@@ -63,9 +63,9 @@ namespace BW_tool
 			{
 				indexbox.SelectedIndex = 165;
 			}
-			else if (indexbox.SelectedIndex == 189)
+			else if (indexbox.SelectedIndex == 240)
 			{
-				indexbox.SelectedIndex = 190;
+				indexbox.SelectedIndex = 241;
 			}
 
 			if (indexbox.SelectedIndex > 0 && indexbox.SelectedIndex < 8)
@@ -84,7 +84,7 @@ namespace BW_tool
 			{
 				medals.Index = (int)indexbox.SelectedIndex - 4;
 			}
-			else if (indexbox.SelectedIndex > 189)
+			else if (indexbox.SelectedIndex > 240)
 			{
 				medals.Index = (int)indexbox.SelectedIndex - 5;
 			}

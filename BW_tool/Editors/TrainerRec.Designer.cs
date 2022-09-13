@@ -62,8 +62,8 @@ namespace BW_tool
 			"002",
 			"003",
 			"004",
-			"005 - Wild Pokémon Encounters",
-			"006 - Trainers Battled",
+			"005 - 野生宝可梦相遇次数",
+			"006 - 对战过的训练家",
 			"007",
 			"008",
 			"009",
@@ -190,7 +190,7 @@ namespace BW_tool
 			this.Controls.Add(this.record_index);
 			this.Controls.Add(this.record_value);
 			this.Name = "TrainerRec";
-			this.Text = "Trainer Card Records Editor";
+			this.Text = "训练家卡片记录编辑器";
 			((System.ComponentModel.ISupportInitialize)(this.record_value)).EndInit();
 			this.ResumeLayout(false);
 

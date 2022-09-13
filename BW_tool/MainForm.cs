@@ -42,7 +42,7 @@ namespace BW_tool
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		public string dsfilter = "NDS save data|*.sav;*.dsv|All Files (*.*)|*.*";
+		public string dsfilter = "NDS存档文件|*.sav;*.dsv|所有文件(*.*)|*.*";
 		public byte[] savebuffer;
 		public static SAV5 save;
 
@@ -76,7 +76,7 @@ namespace BW_tool
 			
 				if (save.B2W2)
 				{
-					versiontext.Text = "Black/White 2";
+					versiontext.Text = "黑2/白2";
 					
 					dumper_but.Enabled = true;
 					chk_but.Enabled = true;
@@ -96,7 +96,7 @@ namespace BW_tool
 				}
 				else if (save.BW)
 				{
-					versiontext.Text = "Black/White 1";
+					versiontext.Text = "黑/白";
 					
 					dumper_but.Enabled = true;
 					chk_but.Enabled = true;
@@ -114,11 +114,11 @@ namespace BW_tool
 					dr_but.Enabled = false;
 					prop_but.Enabled = true;
 				}
-				else versiontext.Text = "Invalid file";
+				else versiontext.Text = "无效文件";
 
 				
 			}else{
-				MessageBox.Show("Invalid file.");
+				MessageBox.Show("无效文件");
 				savegamename.Text = "";
 				dumper_but.Enabled = false;
 				chk_but.Enabled = false;
@@ -196,7 +196,7 @@ namespace BW_tool
 		}
 		void AboutClick(object sender, EventArgs e)
 		{
-			MessageBox.Show("Pokémon Generation 5 save tool by suloku '16\n\nThanks to many people that I'm probably missing out now, but those who shall not be missed are BlackShark for many research and information and kaphotics for reference on pkhex source code and research at project pokemon forums.\n\n"+version());
+			MessageBox.Show("宝可梦GEN5存档工具by suloku '16\n\n许多曾提供帮助的人我或许已记不清名字，感谢你们。但有那么几位无论如何也不会忘记的：提供了许多研究和信息的BlackShark，用以参考的kaphotic的pkhex的源代码及其在projectpokemon论坛上的研究。\n\n" + version());
 		}
 		void Memory_butClick(object sender, EventArgs e)
 		{

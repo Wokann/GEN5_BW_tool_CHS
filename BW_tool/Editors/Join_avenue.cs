@@ -212,7 +212,7 @@ namespace BW_tool
 					helper_subregion.Items.AddRange(a);
 					break;
 				default:
-					helper_subregion.Items.Add("0 None");
+					helper_subregion.Items.Add("0 无");
 					break;
 			}
 		}
@@ -354,7 +354,7 @@ namespace BW_tool
 					shop_subregion.Items.AddRange(a);
 					break;
 				default:
-					shop_subregion.Items.Add("0 None");
+					shop_subregion.Items.Add("0 无");
 					break;
 			}
 		}
@@ -575,7 +575,7 @@ namespace BW_tool
 					visitor_subregion.Items.AddRange(a);
 					break;
 				default:
-					visitor_subregion.Items.Add("0 None");
+					visitor_subregion.Items.Add("0 无");
 					break;
 			}
 		}
@@ -640,7 +640,7 @@ namespace BW_tool
 		{
 			AV_OCCUPANT import = new AV_OCCUPANT();
 			string path = null;
-			int filesize = FileIO.load_file(ref import.Data, ref path, "Poke JoinAvenue Visitor|*.pjv|All Files (*.*)|*.*");
+			int filesize = FileIO.load_file(ref import.Data, ref path, "汇合大道顾客|*.pjv|所有文件(*.*)|*.*");
 			if( filesize == 0xC4)
 			{
 				ja.set_visitor(import, (int)visitor.Value);
@@ -649,13 +649,13 @@ namespace BW_tool
 			}
 			else
 			{
-				MessageBox.Show("Invalid file.");
+				MessageBox.Show("无效文件");
 			}
 
 		}
 		void Visitor_exportClick(object sender, EventArgs e)
 		{
-			FileIO.save_file(ja.visitor[(int)visitor.Value].Data, "Poke JoinAvenue Visitor|*.pjv|All Files (*.*)|*.*");
+			FileIO.save_file(ja.visitor[(int)visitor.Value].Data, "汇合大道顾客|*.pjv|所有文件(*.*)|*.*");
 		}
 		void load_visitor_sprite()
 		{

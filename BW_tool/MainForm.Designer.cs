@@ -81,7 +81,7 @@ namespace BW_tool
 			this.loadsave_but.Name = "loadsave_but";
 			this.loadsave_but.Size = new System.Drawing.Size(132, 23);
 			this.loadsave_but.TabIndex = 0;
-			this.loadsave_but.Text = "Load Savegame";
+			this.loadsave_but.Text = "读取存档";
 			this.loadsave_but.UseVisualStyleBackColor = true;
 			this.loadsave_but.Click += new System.EventHandler(this.Loadsave_butClick);
 			// 
@@ -100,7 +100,7 @@ namespace BW_tool
 			this.save_but.Name = "save_but";
 			this.save_but.Size = new System.Drawing.Size(75, 23);
 			this.save_but.TabIndex = 2;
-			this.save_but.Text = "Save";
+			this.save_but.Text = "保存";
 			this.save_but.UseVisualStyleBackColor = true;
 			this.save_but.Click += new System.EventHandler(this.Save_butClick);
 			// 
@@ -118,7 +118,7 @@ namespace BW_tool
 			this.dumper_but.Name = "dumper_but";
 			this.dumper_but.Size = new System.Drawing.Size(92, 23);
 			this.dumper_but.TabIndex = 4;
-			this.dumper_but.Text = "Block dumper";
+			this.dumper_but.Text = "存档块导出";
 			this.dumper_but.UseVisualStyleBackColor = true;
 			this.dumper_but.Click += new System.EventHandler(this.Dumper_butClick);
 			// 
@@ -129,7 +129,7 @@ namespace BW_tool
 			this.chk_but.Name = "chk_but";
 			this.chk_but.Size = new System.Drawing.Size(99, 23);
 			this.chk_but.TabIndex = 5;
-			this.chk_but.Text = "Verify Checksums";
+			this.chk_but.Text = "确认校验值";
 			this.chk_but.UseVisualStyleBackColor = true;
 			this.chk_but.Click += new System.EventHandler(this.Chk_butClick);
 			// 
@@ -140,7 +140,7 @@ namespace BW_tool
 			this.chk_updt_but.Name = "chk_updt_but";
 			this.chk_updt_but.Size = new System.Drawing.Size(117, 23);
 			this.chk_updt_but.TabIndex = 6;
-			this.chk_updt_but.Text = "Update Checksums";
+			this.chk_updt_but.Text = "更新校验值";
 			this.chk_updt_but.UseVisualStyleBackColor = true;
 			this.chk_updt_but.Click += new System.EventHandler(this.Chk_updt_butClick);
 			// 
@@ -151,7 +151,7 @@ namespace BW_tool
 			this.grotto_but.Name = "grotto_but";
 			this.grotto_but.Size = new System.Drawing.Size(140, 23);
 			this.grotto_but.TabIndex = 7;
-			this.grotto_but.Text = "Hidden Grotto and Swarm";
+			this.grotto_but.Text = "隐藏洞穴和大量出现";
 			this.grotto_but.UseVisualStyleBackColor = true;
 			this.grotto_but.Click += new System.EventHandler(this.Grotto_butClick);
 			// 
@@ -162,7 +162,7 @@ namespace BW_tool
 			this.trainer_records_but.Name = "trainer_records_but";
 			this.trainer_records_but.Size = new System.Drawing.Size(140, 23);
 			this.trainer_records_but.TabIndex = 8;
-			this.trainer_records_but.Text = "Trainer Records";
+			this.trainer_records_but.Text = "训练家记录";
 			this.trainer_records_but.UseVisualStyleBackColor = true;
 			this.trainer_records_but.Visible = false;
 			this.trainer_records_but.Click += new System.EventHandler(this.Trainer_records_butClick);
@@ -174,7 +174,7 @@ namespace BW_tool
 			this.medal_but.Name = "medal_but";
 			this.medal_but.Size = new System.Drawing.Size(140, 23);
 			this.medal_but.TabIndex = 9;
-			this.medal_but.Text = "Medals";
+			this.medal_but.Text = "奖牌";
 			this.medal_but.UseVisualStyleBackColor = true;
 			this.medal_but.Click += new System.EventHandler(this.Medal_butClick);
 			// 
@@ -185,7 +185,7 @@ namespace BW_tool
 			this.forest_but.Name = "forest_but";
 			this.forest_but.Size = new System.Drawing.Size(140, 23);
 			this.forest_but.TabIndex = 10;
-			this.forest_but.Text = "Entralink Forest";
+			this.forest_but.Text = "连入之森";
 			this.forest_but.UseVisualStyleBackColor = true;
 			this.forest_but.Click += new System.EventHandler(this.Forest_butClick);
 			// 
@@ -196,7 +196,7 @@ namespace BW_tool
 			this.key_but.Name = "key_but";
 			this.key_but.Size = new System.Drawing.Size(140, 23);
 			this.key_but.TabIndex = 11;
-			this.key_but.Text = "Key System";
+			this.key_but.Text = "钥匙系统";
 			this.key_but.UseVisualStyleBackColor = true;
 			this.key_but.Click += new System.EventHandler(this.Key_butClick);
 			// 
@@ -207,7 +207,7 @@ namespace BW_tool
 			this.join_but.Name = "join_but";
 			this.join_but.Size = new System.Drawing.Size(140, 23);
 			this.join_but.TabIndex = 12;
-			this.join_but.Text = "Join Avenue";
+			this.join_but.Text = "汇合大道";
 			this.join_but.UseVisualStyleBackColor = true;
 			this.join_but.Click += new System.EventHandler(this.Join_butClick);
 			// 
@@ -218,7 +218,7 @@ namespace BW_tool
 			this.trainer_but.Name = "trainer_but";
 			this.trainer_but.Size = new System.Drawing.Size(140, 23);
 			this.trainer_but.TabIndex = 13;
-			this.trainer_but.Text = "Trainer Info";
+			this.trainer_but.Text = "训练家信息";
 			this.trainer_but.UseVisualStyleBackColor = true;
 			this.trainer_but.Click += new System.EventHandler(this.Trainer_butClick);
 			// 
@@ -239,7 +239,7 @@ namespace BW_tool
 			this.memory_but.Name = "memory_but";
 			this.memory_but.Size = new System.Drawing.Size(140, 23);
 			this.memory_but.TabIndex = 15;
-			this.memory_but.Text = "Memory Link";
+			this.memory_but.Text = "记忆连接";
 			this.memory_but.UseVisualStyleBackColor = true;
 			this.memory_but.Click += new System.EventHandler(this.Memory_butClick);
 			// 
@@ -262,7 +262,7 @@ namespace BW_tool
 			this.dr_but.Name = "dr_but";
 			this.dr_but.Size = new System.Drawing.Size(140, 23);
 			this.dr_but.TabIndex = 17;
-			this.dr_but.Text = "3DS Link (Dream Radar)";
+			this.dr_but.Text = "3DS连接(AR搜寻器)";
 			this.dr_but.UseVisualStyleBackColor = true;
 			this.dr_but.Click += new System.EventHandler(this.Dr_butClick);
 			// 
@@ -273,7 +273,7 @@ namespace BW_tool
 			this.prop_but.Name = "prop_but";
 			this.prop_but.Size = new System.Drawing.Size(140, 23);
 			this.prop_but.TabIndex = 18;
-			this.prop_but.Text = "Prop Case";
+			this.prop_but.Text = "物品箱";
 			this.prop_but.UseVisualStyleBackColor = true;
 			this.prop_but.Click += new System.EventHandler(this.Prop_butClick);
 			// 
@@ -303,7 +303,7 @@ namespace BW_tool
 			this.Controls.Add(this.savegamename);
 			this.Controls.Add(this.loadsave_but);
 			this.Name = "MainForm";
-			this.Text = "Gen V Save Tool by suloku";
+			this.Text = "宝可梦Gen5存档工具 by suloku（汉化by卧看微尘/Wokann）";
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainScreenDragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainScreenDragEnter);
 			this.ResumeLayout(false);

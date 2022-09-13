@@ -1,65 +1,68 @@
 @::::::::::::::::::::::::::::::::::::::::::::::::::@
 |                                                  |
-| Pokémon Generation 5 Save tool by suloku '16-21  |
+| 宝可梦GEN5存档工具by suloku '16-21  |
 |                                                  |
 @::::::::::::::::::::::::::::::::::::::::::::::::::@
 
-Source code is available here: https://github.com/suloku/BW_tool
+由卧看微尘（Wokann）汉化。
 
-This is a multipurpose savegame editor for generation 5 games.
+源代码见此: https://github.com/suloku/BW_tool
+汉化版源代码见此: https://github.com/Wokann/GEN_BW_tool_CHS
 
-Current features:
+这是第 5 代游戏的多功能存档游戏编辑器。
+
+当前特色功能:
 _________________
 
-For BW and BW2:
+黑白黑2白2通用：
 
-* Entralink forest editor (*see exanded note)
-* Trainer information and badges editor (also rival name for BW2)
-* Prop Case editor
-* Block dumper/injector (also decripts/recripts the known encrypted blocks such as entralink forest data block)
-* Checksum verifier/corrector
+* 连入之森编辑 (*见附注)
+* 训练家信息及徽章编辑 (含黑白2劲敌名)
+* 物品箱编辑
+* 存档块导出/注入 (也可也说明/重写已知的加密块，例如连入之森数据块)
+* 校验值确认/修正
 
-Only for BW2:
+仅黑白2:
 
-* Hidden grotto and swarm editor
-* Join Avenue editor (also can import/export visitors)**
-* Key system editor (allows to unlock any keys and change the game configuration)
-* Medal editor: still in a very basic stage, but allows to unlock any medal (to unlock a medal, set it to any date).
-* Memory Link editor: can edit trainer name, TID and SID. Can export/import the memory link block. Can import Name, TID, SID and hall of fame from BW1 savegame. The flags are mostly unknown for now.
-* 3DS Link editor: this allows to edit the 3DS link data, which was only ever used by Pokémon Dream radar. This has a "legal mode" (default), on which you can only insert pokémon and items available in Dream Radar and a "All mode" on which you can insert any pokémon or item. The main purpose is to allow the retreival of Dream Radar exclusive pokémon (like weather trio terrian formes) without the actual need to use Dream Radar. You can also clear the catched flags so you may transfer the legendary pokémon again to your savefile.
+* 隐藏洞穴和大量出现编辑
+* 汇合大道编辑 (可导出导入顾客)**
+* 钥匙系统编辑 (可解锁所有钥匙和更改游戏设置)
+* 奖牌编辑：仍处在基本的编辑操作状态，但支持解锁所有奖牌(及设定获得时间).
+* 记忆连接编辑：可以编辑训练家姓名，TID，SID。可以导出导入记忆连接存档块。可以从黑白1的存档导入姓名，TID，SID和名人堂数据。旗标目前仍待研究。
+* 3DS连接编辑：这可以让你编辑3DS连接的数据，仅用于3DS的AR搜寻器。默认为合法模式，你只能设置AR搜寻器里存在的宝可梦和道具。所有模式，可以让你设置所有的宝可梦和道具。主要目的是允许AR搜寻器专属宝可梦（如三云灵兽形态）状态恢复接收而不需要依赖AR搜寻器。你也可以清除捕获旗标来让你的存档再次接收传说宝可梦。
 
-**4 visitor files are included in the file
-
-
-*About entralink forest editor:
-
-Two kind of files can be used: phl files, which are AREA files and are compatible with pockestock and pikaedit; and efdd files, which is basically the decrypted forest block, so it contains all areas and forest settings. The package includes a legitimate efdd file from Black 1 containing several Dream World Pokémon and the PGL Arceus; and also a legitimate efdd file from White 2 with a couple event pokemon and 9 dream world Pokémon.
-
-The most interesting feature is the "Dream World Simulator", which are some handy buttons with the Dream World areas that allow injecting to the forest a pokémon from Dream World. The pokémon are restricted to what the dream world offered and only that. Each pokémon allows to select the move slot A, B or C*** and gender when aplicable (remember that in gen 5 only females can produce hidden ability eggs).
-
-Similar to "Dream World Simulator" there's a PGL Promotions button, that allows to inject the PGL distributed pokémon as they were distributed. Please note that some of these pokémon were only obtainable on some languages, so receiving it in another language game renders it ilegal. The languages the pokémon could be received on are shown on screen for convenience. Also, these pokémon had fixed gender and moves.
-
-Just to clarify: any pokémon injected using the Dream World or PGL buttons will be absolutely the same as if received from the online service (except out of region PGL pokémon, as there is no region filter in the editor).
+**附带了4个顾客文件。
 
 
-*** Dream World moves
-A: the pokémon learns via level up
-B: pokemon learns trough breeding
-C: dream world exclusive move or breeding move (depends on the pokemon)
+*关于连入之森编辑:
+
+可以使用两种文件：phl文件（可以与pockestock和pikaedit协同的AREA区域文件；efdd文件（基本是解密的森林块，所以它包含了所有区域及森林设置）。附带了来自黑1的合法的efdd文件（其中包含若干梦世界宝可梦和PGL阿尔宙斯）；以及一个来自白2的合法efdd文件（包含一对事件宝可梦及9个梦世界宝可梦）。
+
+最有趣的是“梦世界模拟器”，它带有些方便的按键可以处理梦世界区域，让你导入来自梦世界的宝可梦到连入之森。宝可梦仅限于梦世界存在的每个宝可梦允许选择它的招式槽位A，B，C***以及适用的性别 (注意5代只有雌性的宝可梦可以孵出带有隐藏特性的蛋)。
+
+类似“梦世界模拟器”，有一个PGL促销 按钮，允许导入PGL配信的宝可梦。注意部分宝可梦只能在部分语言获得，在其它语言上接收会为非法。为方便起见，可以接收的语言直接列出来了。此外，这些宝可梦有固定性别和招式。
+
+要明晰一下：所有通过梦世界和PGL按键导入的宝可梦，数据均和在线服务器接收的完全一致（除了区域外PGL宝可梦，因为编辑器没有区域过滤器）。
 
 
-Possible future features:
+*** 梦世界招式
+A: 等级提升招式
+B: 遗传招式
+C: 梦世界专属招式或遗传招式（视宝可梦而定）
+
+
+未来可能的功能:
 _________________
 
-* Finish medal editor and trainer records: these features need research, since some medals are tied to in-game records. The goal is to make the editing as legit as possible, at the very least for the online exclusive medals that are not obtainable anymore and those almost impossible to obtain medals (30 people funfest mission, etc.).
-* Memory link injecting/editing for BW2, and maybe importing some data from a BW1 savegame to memory link.
+* 完成奖牌编辑和训练家记录：这些功能仍待研究，因为一些奖牌与游戏内的其他记录相关联。目标是使编辑尽可能合法，至少对于无法在获得的在线专属奖牌，及几乎不可能获得的奖牌（如30人庆典任务等等）。
+* 记忆连接导入/编辑器（黑白2），可能从黑白1的存档中导入数据。
 
 
-Note: there's a trainer records button, which is a possible future feature, and I haven't locked it for release.
-Note 2: savegame can be loaded via drag and drop.
+注意：有一个训练家记录按键，这是未来可能功能，并未锁定它以供发布。
+注意2：存档可以拖拽放置来加载。
 
 
-Thanks to:
+鸣谢：
 __________
 
-Many people that I'm probably missing out now, but those who shall not be missed are BlackShark for many research and information and kaphotics for reference on pkhex source code and research at project pokemon forums.
+许多曾提供帮助的人我或许已记不清名字，但有那么几位无论如何也不会忘记的：提供了许多研究和信息的BlackShark，我用以参考的kaphotic的pkhex的源代码及其在projectpokemon论坛上的研究。

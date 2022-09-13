@@ -82,28 +82,28 @@ namespace BW_tool
 			{
 				tnr_class.Items.Clear();
 				tnr_class.Items.AddRange(new object[] {
-					"Youngster",
-					"Ace trainer",
-					"PKMN Ranger",
-					"PKMN Breeder",
-					"Scientist",
-					"Hiker",
-					"Roughneck",
-					"Preschooler"});
+					"短裤小子",
+					"精英训练家",
+					"宝可梦巡护员",
+					"宝可梦培育家",
+					"研究员",
+					"登山男",
+					"光头男",
+					"幼儿园小朋友"});
 				tnr_class.SelectedIndex = ash.trainer_class;
 			}
 			else
 			{
 				tnr_class.Items.Clear();
 				tnr_class.Items.AddRange(new object[] {
-					"Lass",
-					"Ace trainer",
-					"PKMN Ranger",
-					"PKMN Breeder",
-					"Scientist",
-					"Parasol Lady",
-					"Nurse",
-					"Preschooler"});
+					"迷你裙",
+					"精英训练家",
+					"宝可梦巡护员",
+					"宝可梦培育家",
+					"研究员",
+					"阳伞姐姐",
+					"护士",
+					"幼儿园小朋友"});
 				tnr_class.SelectedIndex = ash.trainer_class-8;
 			}
 			gender.SelectedIndex = ash.gender;

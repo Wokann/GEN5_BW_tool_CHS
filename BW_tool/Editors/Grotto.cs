@@ -621,32 +621,32 @@ namespace BW_tool
 				case 0:
 					if (fungrottobox.SelectedIndex < 15 && fungrottobox.SelectedIndex > 4)
 					{
-						gender5.Text = gender10.Text = "M";
-						gender30.Text = gender60.Text = "F";
+						gender5.Text = gender10.Text = "雄";
+						gender30.Text = gender60.Text = "雌";
 					}else if (fungrottobox.SelectedIndex < 5 && fungrottobox.SelectedIndex > 2)
 					{
-						gender5.Text = "M";
-						gender10.Text = gender30.Text = gender60.Text = "F";
+						gender5.Text = "雄";
+						gender10.Text = gender30.Text = gender60.Text = "雌";
 					}else if (fungrottobox.SelectedIndex < 3)
 					{
-						gender5.Text = gender10.Text = gender30.Text = gender60.Text = "F";
+						gender5.Text = gender10.Text = gender30.Text = gender60.Text = "雌";
 					}
 					else{
-						gender5.Text = gender10.Text = gender30.Text = gender60.Text = "M";
+						gender5.Text = gender10.Text = gender30.Text = gender60.Text = "雄";
 					}
 					break;
 				case 1:
 					if (fungrottobox.SelectedIndex < 14)
 					{
-						gender5.Text = gender10.Text = gender30.Text = "M";
-						gender60.Text = "F";
+						gender5.Text = gender10.Text = gender30.Text = "雄";
+						gender60.Text = "雌";
 					}else{
-						gender5.Text = gender10.Text = gender30.Text = gender60.Text = "M";
+						gender5.Text = gender10.Text = gender30.Text = gender60.Text = "雄";
 					}
 					break;
 				case 2:
 				case 3:
-					gender5.Text = gender10.Text = gender30.Text = gender60.Text = "M";
+					gender5.Text = gender10.Text = gender30.Text = gender60.Text = "雄";
 					break;
 			}
 		}
@@ -686,14 +686,18 @@ namespace BW_tool
 		}
 		void LastvisitedhelpClick(object sender, EventArgs e)
 		{
-			MessageBox.Show("This value stores the last visited grotto. If you saved within a hidden grotto and modify this value, your savegame will warp its location to the selected hidden grotto.\n\nBeware you can get stuck if you don't have some HM moves in your team required to reach the grotto.");
+			MessageBox.Show("这个值存储了上一次拜访的隐藏洞穴。如果你在洞穴内保存并修改了此值，你的存档地点将切换到对应的洞穴处。" +
+							"\n\n注意如果你的同行宝可梦中没有能到达该地点所必需的秘传招式，你可能会被卡在该位置。");
 		}
 		void FungrottohelpClick(object sender, EventArgs e)
 		{
-			MessageBox.Show("This value seems to be used to determine if there will be a stunky/glameaow in the noisy/quiet grotto funfest mission. Maybe it is only used on special funfest mission like this one (and the event funfest missions for eevee and its evolutions. On this mission, if funfest value has a pokemon 1, 2 or 3 value, a pokemon will appear, if not, the normal grotto item will appear." +
-			                "\n\nThis value is randomly set alongside with the normal grotto value when the grotto is regenerated." +
-			                "\n\nUnknown/Not used/Buggy: if normal grotto is unavailable and one of this funfest(?) grotto values is available, a ghost dowsing machine item will appear (dowsing detects an item, but it can't be retrieved)." +
-			                "\n\nMore testing needed.");
+			MessageBox.Show("这个值似乎用来决定在嘈杂/安静的庆典任务隐藏洞穴中出现臭鼬噗/魅力喵。" +
+							"也许它只是用于像这种的特殊庆典任务（以及伊布及其进化型的庆典任务）。 " +
+                            "在这种任务中，如果庆典值是宝可梦 1，2，3，则会出现一个宝可梦，如果没有，则出现正常洞穴物品。" +
+			                "\n\n当洞穴重新生成时，这个值会与正常的洞穴值一起随机设置。" +
+			                "\n\n未知/未使用/漏洞：如果正常洞穴不可用，并且有一个庆典任务洞穴(?)可用，" +
+                            "那么会出现一个幽灵般的隐藏道具（探宝器可以搜索到，但是无法获得）。" +
+			                "\n\n还需要更多的测试。");
 		}
 		void ForceFemale_butClick(object sender, EventArgs e)
 		{
@@ -708,7 +712,9 @@ namespace BW_tool
 		}
 		void Note_butClick(object sender, EventArgs e)
 		{
-			MessageBox.Show("Note: if you have saved inside a grotto that has a pokemon and modify the grotto slot to hold an item, after you load the save you can still trigger a battle with the pokemon. In this case you will battle a level 1 Gurdur (which isn't a pokemon available at hidden grottoes).");
+			MessageBox.Show("注：如果你在有宝可梦的洞穴里保存并修改了槽位为道具，" +
+							"当你重新读档后你仍可以与宝可梦触发对战。这种情况下你将与1级的铁骨土人对战" +
+                            "(而不是隐藏洞穴里会正常出现的宝可梦)。");
 		}
 
 		void Black2table_butClick(object sender, EventArgs e)
@@ -719,8 +725,8 @@ namespace BW_tool
 		    try
 		    {
 				pictureBox.Dock = DockStyle.Fill;
-				//pictureBox.Image = Image.FromFile("./grotto_tables/b2_"+Grotto_route.SelectedIndex+".png");
-				pictureBox.Image = (Bitmap)resources.GetObject("b2_"+Grotto_route.SelectedIndex);
+				pictureBox.Image = Image.FromFile("./grotto_tables/b2_"+Grotto_route.SelectedIndex+".png");
+				//pictureBox.Image = (Bitmap)resources.GetObject("b2_"+Grotto_route.SelectedIndex);
 				pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
 				form.Controls.Add(pictureBox);
 				Size size = new Size(720,300);
@@ -729,15 +735,15 @@ namespace BW_tool
 		    }
 		    catch(System.IO.FileNotFoundException)
 		    {
-		        MessageBox.Show("There was an error opening the table.\n" +
-		            "Please check you have included grotto_tables folder in the same path as BW_tool.exe.");
+		        MessageBox.Show("打开列表时发生了错误。\n" +
+		            "请检查你的grotto_tables文件夹是否跟BW_tool.exe在同一路径下。");
 		    }
 
 		}
 		void Grotto_helpClick(object sender, EventArgs e)
 		{
 			if (MessageBox.Show(
-			        "Open pokemon slots Hidden Grotto spreadsheet in web browser?", "Visit", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk
+					"使用网络浏览器查阅隐藏洞穴的宝可梦槽位表吗？\n\n(你也可在grotto_tables文件夹内的grotto_CHS.xlsx表格直接查看。)", "浏览", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk
 			    ) == DialogResult.Yes)
 			{
 			    System.Diagnostics.Process.Start("https://sites.google.com/site/pokemonslots/gen-v/hidden-grottos");

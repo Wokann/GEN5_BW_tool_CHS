@@ -33,13 +33,13 @@ namespace BW_tool
 			
 			if (ml.block2.name == "")
 			{
-				MessageBox.Show("The savegame does not contain memory link Data.\n\nA default memory link data will be loaded, it unlocks the following:" +
-				                "\n\t- All 8 flashbacks" +
-				                "\n\t- NPC Battles with Cheren and Bianca" +
-				                "\n\t- NPC will use BW1 trainer name instead of just Trainer" +
-				                "\n\t- Certificates for completed Pokedex and trophies from Battle Subway\n\t   (they are placed in the players room)" +
-				                "\n\t- My personal hall of fame from my BW1 playthrough\n\t    (no known use in-game)" +
-				                "\n\nNote: No data related to Loblolly's Studio (would unlock Dream World furniture from BW on BW2) is present, but Dream World has closed anyways.");
+				MessageBox.Show("这个存档未包含记忆连接数据。\n\n将载入一个默认的记忆连接数据，它解锁以下内容：" +
+				                "\n\t- 所有8个回想" +
+				                "\n\t- 与白露或黑连对战" +
+				                "\n\t- NPC将使用BW1的训练家名字而非仅仅训练家" +
+				                "\n\t- 完成图鉴的奖状和对战地铁的奖杯\n\t   (将放在前作主角房间)" +
+				                "\n\t- 在BW1游戏中的名人堂数据\n\t    (游戏中暂未发现在何处使用)" +
+								"\n\n注：没有与紫檀的工作室相关的数据（将在 BW2 上从 BW 解锁梦世界的家具），但梦世界无论如何都已关闭。");
 				
 				ml = new MEMORIES(default_memories);
 				ml.block2.name = "PPorg";
@@ -115,21 +115,21 @@ namespace BW_tool
 		}
 		void B1_exportClick(object sender, EventArgs e)
 		{
-			FileIO.save_file(ml.block1.Data, "Memory Link Data|*.bin|All Files (*.*)|*.*");
+			FileIO.save_file(ml.block1.Data, "记忆连接数据|*.bin|所有文件(*.*)|*.*");
 		}
 		void B1m_exportClick(object sender, EventArgs e)
 		{
-			FileIO.save_file(ml.block1_mirror.Data, "Memory Link Data|*.bin|All Files (*.*)|*.*");
+			FileIO.save_file(ml.block1_mirror.Data, "记忆连接数据|*.bin|所有文件(*.*)|*.*");
 		}
 		void B2_exportClick(object sender, EventArgs e)
 		{
-			FileIO.save_file(ml.block2.Data, "Memory Link Data|*.bin|All Files (*.*)|*.*");
+			FileIO.save_file(ml.block2.Data, "记忆连接数据|*.bin|所有文件(*.*)|*.*");
 		}
 		void B1_importClick(object sender, EventArgs e)
 		{
 			byte[] new_block1 = new byte[MEMORIES.ML_BLOCK1.Size];
 	      	string path = null;
-	        int filesize = FileIO.load_file(ref new_block1, ref path, "Memory Link Data|*.bin|All Files (*.*)|*.*");
+	        int filesize = FileIO.load_file(ref new_block1, ref path, "记忆连接数据|*.bin|所有文件(*.*)|*.*");
 	        
 	        if( filesize == MEMORIES.ML_BLOCK1.Size )
 			{
@@ -138,14 +138,14 @@ namespace BW_tool
 		        load_data();
 		    }else
 	        {
-	        	MessageBox.Show("Invalid file");
+	        	MessageBox.Show("无效文件");
 	        }
 		}
 		void B1m_importClick(object sender, EventArgs e)
 		{
 			byte[] new_block1m = new byte[MEMORIES.ML_BLOCK1.Size];
 	      	string path = null;
-	        int filesize =  FileIO.load_file(ref new_block1m, ref path, "Memory Link Data|*.bin|All Files (*.*)|*.*");
+	        int filesize =  FileIO.load_file(ref new_block1m, ref path, "记忆连接数据|*.bin|所有文件(*.*)|*.*");
 
 	     	if( filesize == MEMORIES.ML_BLOCK1.Size )
 			{
@@ -154,14 +154,14 @@ namespace BW_tool
 		        load_data();
  			}else
 	        {
-	        	MessageBox.Show("Invalid file");
+	        	MessageBox.Show("无效文件");
 	        }
 		}
 		void B2_importClick(object sender, EventArgs e)
 		{
 			byte[] new_block2 = new byte[MEMORIES.ML_BLOCK2.Size];
 	      	string path = null;
-	     	int filesize =  FileIO.load_file(ref new_block2, ref path, "Memory Link Data|*.bin|All Files (*.*)|*.*");
+	     	int filesize =  FileIO.load_file(ref new_block2, ref path, "记忆连接数据|*.bin|所有文件(*.*)|*.*");
 	        
 	     	if( filesize == MEMORIES.ML_BLOCK2.Size )
 			{
@@ -170,14 +170,14 @@ namespace BW_tool
 		        load_data();
  			}else
 	        {
-	        	MessageBox.Show("Invalid file");
+	        	MessageBox.Show("无效文件");
 	        }
 		}
 		void Memory_importClick(object sender, EventArgs e)
 		{
 			byte[] new_memory = new byte[MEMORIES.Size];
 	      	string path = null;
-	        int filesize = FileIO.load_file(ref new_memory, ref path, "Memory Link Data|*.mld|All Files (*.*)|*.*");
+	        int filesize = FileIO.load_file(ref new_memory, ref path, "记忆连接数据|*.mld|所有文件(*.*)|*.*");
 	        if( filesize == MEMORIES.Size )
 			{
 	        	ml = new MEMORIES(new_memory);
@@ -185,19 +185,19 @@ namespace BW_tool
 				load_data();
 	        }else
 	        {
-	        	MessageBox.Show("Invalid file");
+	        	MessageBox.Show("无效文件");
 	        }
 		}
 		void Memory_exportClick(object sender, EventArgs e)
 		{
-			FileIO.save_file(ml.Data, "Memory Link Data|*.mld|All Files (*.*)|*.*");
+			FileIO.save_file(ml.Data, "记忆连接数据|*.mld|所有文件(*.*)|*.*");
 		}
 		void Import_bw1Click(object sender, EventArgs e)
 		{
 			byte[] bw1 = new byte[SAV5.SIZERAW+122];
 	      	string path = null;
 	        
-			int filesize = FileIO.load_file(ref bw1, ref path, "NDS save data|*.sav;*.dsv|All Files (*.*)|*.*");
+			int filesize = FileIO.load_file(ref bw1, ref path, "NDS存档数据|*.sav;*.dsv|所有文件(*.*)|*.*");
 
 			if( filesize == SAV5.SIZERAW || filesize == SAV5.SIZERAW+122 )
 			{
@@ -225,11 +225,11 @@ namespace BW_tool
 					//Reload all data
 					load_data();
 					
-					MessageBox.Show("Imported: Trainer Name, TID, SID, Starter, Hall of Fame, Props");
+					MessageBox.Show("已导入：训练家名字, TID, SID, 初始宝可梦, 名人堂, 物品箱");
 				}
 				else{
 					
-					MessageBox.Show("Not a valid savegame!");
+					MessageBox.Show("不是有效的存档!");
 				}
 			}
 		}
@@ -764,7 +764,7 @@ namespace BW_tool
 		void PropUnlockButClick(object sender, EventArgs e)
 		{
 			ml.block2.set_props(default_memories.Skip(0x894).Take(0x13).ToArray());
-			MessageBox.Show("All props have been unlocked for memory link.");
+			MessageBox.Show("所有物品箱的饰品已为记忆连接解锁。");
 			PROP.Text = BitConverter.ToString(ml.block2.getData(0x94, 13)).Replace("-", string.Empty);
 		}
 		

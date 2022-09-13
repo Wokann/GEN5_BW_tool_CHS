@@ -28,7 +28,7 @@ namespace BW_tool
 			keys =  new KEY(MainForm.save.getBlock(keyblock));
 			
 			if (keys.KeysUnlocked() == false)
-				MessageBox.Show("  Warning!\n\nThis savefile doesn't seem to have unlocked the key system yet.\nKey system is unlocked after beating the Elite Four.\n\nYou can still edit it though.");
+				MessageBox.Show("  警告！\n\n这个存档似乎还未开启钥匙系统。\n钥匙系统将在登入名人堂后开启。\n\n您仍可以在此处编辑。");
 			
 			updatekeys();
 			
