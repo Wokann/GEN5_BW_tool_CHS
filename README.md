@@ -7,7 +7,8 @@
 由卧看微尘（Wokann）汉化。
 
 源代码见此: https://github.com/suloku/BW_tool
-汉化版源代码见此: https://github.com/Wokann/GEN_BW_tool_CHS
+
+汉化版源代码见此: https://github.com/Wokann/GEN5_BW_tool_CHS
 
 这是第 5 代游戏的多功能存档游戏编辑器。
 
